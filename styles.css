@@ -1,90 +1,135 @@
+:root {
+  --large-tablet: 1024px;
+  --container-width: 0.9;
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fafafa;
+  background-image: url("./assets/seamless-fashion-pattern-photoshop-patterns.jpg");
+  /* reduce size of pattern image */
+  background-size: 20%;
   color: #333;
   text-align: center;
 }
 nav ul {
+  /* remove disc from list elements */
   list-style: none;
   padding: 0;
   display: flex;
   justify-content: center;
   background: #222;
   padding: 1rem 0;
+  margin: 0;
 }
 nav ul li {
-  margin: 0 15px;
+  margin: 0 1.5rem;
 }
 nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
-/* header {
-  padding: 100px 20px;
-  background: url('./assets/fashion-bg.webp') center/cover no-repeat;
-  color: white;
-} */
 header {
+  display: flex;
+  justify-content: center;
+}
+.header-image {
   position: relative;
   text-align: center;
-  padding: 100px 20px;
-  background: url('./assets/fashion-bg.webp') center/cover no-repeat;
+  /* image size is 100px above and below header content */
+  padding: 100px 0;
+  background: url("./assets/essesence-hollywood.jpg") center/cover no-repeat;
+  /* make image same size as container content */
+  min-width: calc(var(--container-width) * var(--large-tablet));
+  /* image is dark so use a white font */
   color: white;
 }
-header::before {
+/* Add shading to the header */
+/* header::before { */
+.header-image::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  /* Native background image aspect ratio =  640/1920 = 1/3 */
+  max-height: calc(var(--large-tablet) * var(--container-width) / 3);
 }
-header h1, header p, header .btn {
+.header-content {
+  /* position the content 90% from the top */
+  position: relative;
+  top: 90%;
+  /* add a shadow to make text readable over background image */
+  text-shadow: 1px 1px 4px black;
+}
+header h1 {
+  margin-top: 0;
+}
+/* place header text on top of background image */
+header h1,
+header p {
   position: relative;
   z-index: 1;
 }
-.extra-content {
-  margin: 40px auto;
-  padding: 20px;
-  max-width: 800px;
-  text-align: center;
-  font-size: 1.1em;
-}
-.btn {
-  background: #ff4081;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 20px;
-}
-.btn:hover {
-  background: #e91e63;
-}
-.about-container {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 30px;
-  background: #f9f9f9;
+.my-container {
+  max-width: calc(var(--container-width) * var(--large-tablet));
+  margin: 0 auto;
+  padding: 2em;
+  background-color: #f0f0f0;
   border-radius: 10px;
+  border-radius: 0.5em;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-size: 1.1em;
   line-height: 1.6;
   text-align: left;
+  border: 2px solid #ff9fa0;
 }
-.about-container h1 {
+.my-container h1 {
   text-align: center;
   color: #333;
 }
-.about-container p, .about-container ul {
-  margin-bottom: 15px;
+.my-container p,
+.my-container ul {
+  margin-bottom: 1em;
 }
-.about-container ul {
-  padding-left: 20px;
+.my-container ul {
+  padding-left: 1em;
   list-style: none;
+}
+.my-container ul.disc {
+  list-style: disc;
+}
+.my-container figure img {
+  /* max-width: 100%; */
+  width: 100%;
+}
+
+.portfolio-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.portfolio-container h1 {
+  text-align: center;
+  color: #333;
+}
+.portfolio-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.portfolio-item:last-child {
+  border-bottom: none;
+}
+
+/* reduce spacing between nav items for small screens */
+@media only screen and (max-width: 768px) {
+  nav ul li {
+    margin: 0 1rem;
+  }
 }
