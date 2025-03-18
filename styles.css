@@ -128,6 +128,53 @@ header p {
   border-bottom: none;
 }
 
+/* footer {
+  display flex;
+  background: #000;
+  color:#fff;
+}
+footer ul {
+  list-style-type: none;
+} */
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  clear: both;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+footer li {
+  margin-right: 20px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-size: 1em;
+}
+
+.social-media:hover {
+  color: #fefe5f;
+}
+
+.social-media {
+  margin-bottom: 0.5em;
+}
+
+.social-media i {
+  margin-right: 10px;
+}
 /* reduce spacing between nav items for small screens */
 @media only screen and (max-width: 768px) {
   nav ul li {
