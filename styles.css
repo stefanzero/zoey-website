@@ -6,7 +6,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url("./assets/seamless-fashion-pattern-photoshop-patterns.jpg");
+  /* background-image: url("./assets/seamless-fashion-pattern-photoshop-patterns.jpg"); */
+  background-image: url("https://cdn.glitch.global/d0d1b095-3eb2-4c68-8f2a-3e74e70817ba/seamless-fashion-pattern-photoshop-patterns.jpg?v=1741817508617");
   /* reduce size of pattern image */
   background-size: 20%;
   color: #333;
@@ -39,7 +40,11 @@ header {
   text-align: center;
   /* image size is 100px above and below header content */
   padding: 100px 0;
-  background: url("./assets/essesence-hollywood.jpg") center/cover no-repeat;
+  /* background: url("./assets/essesence-hollywood.jpg") center/cover no-repeat; */
+  /* background: url("https://cdn.glitch.global/d0d1b095-3eb2-4c68-8f2a-3e74e70817ba/essesence-hollywood.jpg?v=1741817505481") */
+  /* background: url("./assets/grownish-friends.jpg") center/cover no-repeat; */
+  background: url("https://cdn.glitch.global/d0d1b095-3eb2-4c68-8f2a-3e74e70817ba/grownish-friends.jpg?v=1742288635150") center/cover no-repeat;
+    center/cover no-repeat;
   /* make image same size as container content */
   width: 100vw;
   max-width: calc(var(--container-width) * var(--large-tablet));
