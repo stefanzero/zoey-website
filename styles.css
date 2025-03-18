@@ -17,9 +17,10 @@ nav ul {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: space-around;
   background: #222;
-  padding: 1rem 0;
+  padding: 1rem 0.5rem;
   margin: 0;
 }
 nav ul li {
@@ -131,5 +132,14 @@ header p {
 @media only screen and (max-width: 768px) {
   nav ul li {
     margin: 0 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* reduce spacing between nav items for very small screens */
+@media only screen and (max-width: 600px) {
+  nav ul li {
+    margin: 0 0.5rem;
+    font-size: 0.8rem;
   }
 }
